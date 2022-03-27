@@ -17,6 +17,7 @@ CREATE TABLE articles (
     name VARCHAR(255) NOT NULL,
     in_stock INT NOT NULL DEFAULT 0
 );
+
 CREATE TABLE products_articles (
     product_id INT NOT NULL,
     article_id INT NOT NULL,
