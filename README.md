@@ -25,6 +25,9 @@ Load products from product.json file and store it in database.
 GET /getProducts
 Returns all products with it's articles in the stock.
 
+GET /getArticles
+Returns all the articles in the stock.
+
 POST /sellProduct/:id
 
 Sells a product from the warehouse system and update inventory accordingly.
