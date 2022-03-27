@@ -12,6 +12,13 @@ npm install
 
 # Create tables in mysql
 See database.sql
+
+# Run client
+npm start
+
+# Run server
+npm run start
+
 # API
 
 POST article/uploadfile
