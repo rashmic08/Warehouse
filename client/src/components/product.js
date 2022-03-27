@@ -70,6 +70,7 @@ const Product = withStyles(
         console.log(res);
       })
     }
+    window.location.reload();
   };
 
   const showProducts = () => {

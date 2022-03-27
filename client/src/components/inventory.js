@@ -72,6 +72,7 @@ const Inventory = withStyles(
         console.log(res);
       })
     }
+    window.location.reload();
   };
 
   const showArticles = () => {
