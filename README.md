@@ -1,27 +1,35 @@
 # Warehouse
-Scan the dependency files
+Get all products and quantity of each that is available with the current inventory
+Remove(Sell) a product and update the inventory accordingly
+
+# The solution
+REST API implemented in node.js to manipulate the products and inventory of the warehouse.
+UI implemented in reacj.js
+DB used mysql
 
 # install dependencies
 npm install
 
-## Database
-CREATE TABLE products (
-    products_id INT NOT NULL PRIMARY KEY,
-    product_name VARCHAR(255) NOT NULL,
-	product_price INT
-    article_list VARCHAR(255)
-);
+# Create tables in mysql
+See database.sql
+# API
 
-CREATE TABLE articles (
-    article_id INT NOT NULL PRIMARY KEY,
-    name VARCHAR(255) NOT NULL,
-    in_stock INT NOT NULL DEFAULT 0
-);
+POST article/uploadfile
 
-CREATE TABLE products_articles (
-    product_id INT NOT NULL,
-    article_id INT NOT NULL,
-    amount_of  INT NOT NULL,
-    FOREIGN KEY (product_id) REFERENCES products(id),
-    FOREIGN KEY (article_id) REFERENCES articles(id)
-);
+Load products from inventory.json file and store it in database.
+
+POST product/uploadfile
+
+Load products from product.json file and store it in database.
+
+GET /getProducts
+Returns all products with it's articles in the stock.
+
+POST /sellProduct/:id
+
+Sells a product from the warehouse system and update inventory accordingly.
+
+# TODO
+checkHowManyProductsPossibleWithCurrentArticles
+updateAvailability
+
