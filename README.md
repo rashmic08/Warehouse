@@ -34,5 +34,6 @@ Sells a product from the warehouse system and update inventory accordingly.
 
 # TODO
 checkHowManyProductsPossibleWithCurrentArticles
+
 updateAvailability
 
