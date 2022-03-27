@@ -4,7 +4,7 @@ Scan the dependency files
 # install dependencies
 npm install
 
-# Database
+## Database
 CREATE TABLE products (
     products_id INT NOT NULL PRIMARY KEY,
     product_name VARCHAR(255) NOT NULL,
