@@ -1,6 +1,6 @@
 # Warehouse
-Get all products and quantity of each that is available with the current inventory
-Remove(Sell) a product and update the inventory accordingly
+Get all products and quantity of each that is available with the current inventory.
+Buy a product and update the inventory accordingly
 
 # The solution
 REST API implemented in node.js to manipulate the products and inventory of the warehouse.
