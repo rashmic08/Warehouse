@@ -39,6 +39,13 @@ POST /sellProduct/:id
 
 Sells a product from the warehouse system and update inventory accordingly.
 
+# Screenshots
+
+![Screenshot 2022-03-28 at 07 51 46](https://user-images.githubusercontent.com/27699060/160334621-a5f1574f-12d8-4dd7-b8a4-864a6a2bb9c2.png)
+
+![Screenshot 2022-03-28 at 07 51 59](https://user-images.githubusercontent.com/27699060/160334652-2788df71-defa-4f20-840b-3e467dc2e727.png)
+
+
 # TODO
 checkHowManyProductsPossibleWithCurrentArticles
 
