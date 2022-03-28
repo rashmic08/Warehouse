@@ -7,6 +7,44 @@ var fs = require('fs')
 
 const upload = multer({ dest: "uploads/" });
 
+/*TODO PSEUDO CODE to imlement availability
+  function updateAvailability() {
+
+    create below map from articles table:
+
+    map 1 articles_inventory =
+    1 = 12 leg
+    2 = 17 screw
+    3 = 2 seat
+
+    Create below map from Prod_Articles_Relation;
+    map 2:
+    21 = [[1, 4], [2, 8], [3, 1]]
+    prodid = [[artid, art_qty_required], [artid, art_qty_required]];
+    Fetch product table;
+    Loop Products:
+    prodavail = checkHowManyProductsPossibleWithCurrentArticles(prod id);
+    Run update query on Products table and save it in DB
+  }
+
+
+  function checkHowManyProductsPossibleWithCurrentArticles(prod id) {
+    count = 0;
+    Create copy map 1 = m1_copy
+    Get list of list from map 2
+    while (true) {
+      Loop list:
+      var d = [1, 4]
+      op = m1_copy[d[0]] - d[1]
+      if (op < 0) { return count }
+      else m1_copy[d[0]] = op;
+    }
+    count++;
+  }
+  return count;
+}*/
+
+
 router.post('/uploadfile', upload.single('file'), function (req, res) {
   if (!req.file) {
     console.log("No file upload");
@@ -53,6 +91,7 @@ router.post('/uploadfile', upload.single('file'), function (req, res) {
                         throw err;
                       });
                     }
+                    //TODO To implement updateAvailability() and show to the user
                     connection.commit(function (err) {
                       if (err) {
                         connection.rollback(function () {

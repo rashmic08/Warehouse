@@ -47,7 +47,7 @@ const Inventory = withStyles(
   const { classes } = props;
 
   const [file, setFile] = useState();
-  const [allData, setAllData] = useState();
+  const [inventoryData, setInventoryData] = useState();
 
   useEffect(() => {
     showArticles();
@@ -79,8 +79,8 @@ const Inventory = withStyles(
     console.log("Click on show showArticles");
     Axios.get('http://localhost:3001/article/getArticles').then((res) => {
       console.log("sucess", res);
-      console.log("response.data--", res.data);
-      setAllData(res.data);
+      console.log("response.inventorydata--", res.data);
+      setInventoryData(res.data);
     })
   }
 
@@ -105,7 +105,7 @@ const Inventory = withStyles(
             </TableRow>
           </TableHead>
           <TableBody>
-            {allData?.map((row, index) => (
+            {inventoryData?.map((row, index) => (
               <TableRow
                 key={index}
                 sx={{ '&:last-child td, &:last-child th': { border: 0 } }}

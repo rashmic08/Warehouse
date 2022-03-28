@@ -75,8 +75,7 @@ const Product = withStyles(
 
   const showProducts = () => {
     Axios.get('http://localhost:3001/product/getProducts').then((res) => {
-      console.log("sucess", res);
-      console.log("response.data-getProducts-", res.data);
+      console.log("response.data-Products-", res.data);
       setProductData(res.data);
     })
   }
@@ -87,6 +86,7 @@ const Product = withStyles(
     Axios.post(`http://localhost:3001/product/sellProduct/${id}`).then(res => {
       console.log("sucess after onBuy", res);
     })
+    window.location.reload();
   }
 
 
