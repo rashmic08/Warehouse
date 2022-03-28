@@ -56,7 +56,9 @@ Implement ability to sell a product and update the inventory accordingly
 ![Screenshot 2022-03-28 at 07 51 59](https://user-images.githubusercontent.com/27699060/160334652-2788df71-defa-4f20-840b-3e467dc2e727.png)
 
 
-# TODO
+# TODO 
+Due to time constraints couldn't work on availabily but I have added Pseudo code in the file
+
 checkHowManyProductsPossibleWithCurrentArticles
 
 updateAvailability
