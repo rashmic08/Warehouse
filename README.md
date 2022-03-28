@@ -39,6 +39,16 @@ POST /sellProduct/:id
 
 Sells a product from the warehouse system and update inventory accordingly.
 
+
+# STEPS
+
+Create database structure
+
+Implement ability to upload inventory.json file on server and then store in database
+Implement ability to upload products.json file on server and then store in database
+Implement products list
+Implement ability to sell a product and update the inventory accordingly
+
 # Screenshots
 
 ![Screenshot 2022-03-28 at 07 51 46](https://user-images.githubusercontent.com/27699060/160334621-a5f1574f-12d8-4dd7-b8a4-864a6a2bb9c2.png)
